@@ -1,0 +1,17 @@
+﻿@model Author
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Name</h1>
+    <ul>
+        <h2><strong>Books Written by @Model.Name:</strong></h2>
+        <ul>
+            @foreach (var book in Model.Books)
+            {
+                <li>@book.Title</li>
+            }
+        </ul>
+    </ul>
+</div>
